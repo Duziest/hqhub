@@ -168,9 +168,3 @@
 /* 168 */     this.hubs = hubs;
 /*     */   }
 /*     */ }
-
-
-/* Location:              /Users/benjaminmeyer/Downloads/HQHub.jar!/com/primalgamesllc/hqhub/Main.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       1.1.3
- */
