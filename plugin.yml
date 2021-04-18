@@ -1,0 +1,7 @@
+name: HQHub
+version: 1.0
+main: com.primalgamesllc.hqhub.Main
+depend: [Essentials, EssentialsSpawn]
+softdepend: [PlaceholderAPI, MVdWPlaceholderAPI]
+description: A Hub Plugin
+author: Duziest 

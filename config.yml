@@ -1,0 +1,125 @@
+###########################################
+#                                         #
+#         Plugin made by Duziest          #
+#         PrimalGamesLLC HQHub            #
+#     Do not Redistribute this Plugin     #
+#                                         #
+###########################################
+# DO NOT EDIT THIS OR CONFIG MIGHT RESET!
+version: 2
+
+# Format: <Hub-Name>;<Hub-Port>
+hubs:
+  - 'Hub1;25565'
+  - 'Hub2;25566'
+  - 'Hub3;25567'
+  - 'Hub4;25568'
+  - 'Hub5;25569'
+  - 'Hub6;25570'
+  - 'Hub7;25571'
+
+# Format: <Server-Name>
+servers: ['Factions', 'ArenaPvP', 'Hub']
+
+# Configurate the Hub Items.
+options:
+  rainbow-spacer:
+    item:
+    - STAINED_GLASS_PANE:1
+    - STAINED_GLASS_PANE:4
+    - STAINED_GLASS_PANE:5
+    - STAINED_GLASS_PANE:7
+    amount: 1
+    name: ' '
+  server-selector:
+    item: 'COMPASS'
+    amount: 1
+    name: '&e&lServer Selector &7(Right Click)'
+    lore:
+    - '&7(Click to browse servers)'
+  lobby-selector:
+    item: 'WATCH'
+    amount: 1
+    name: '&e&lLobby Selector &7(Right Click)'
+    lore:
+    - '&7(Click to browse lobbies)'
+  hub-icon:
+    item: 'WOOL'
+    name: '&f&lHub<index> &7(Click To Connect)'
+    lore:
+    - '&f<online> / 300'
+    - '<server_status>'
+  hub-already-icon:
+    item: 'WOOL:7'
+    name: '&f&lHub<index> &7(Click To Connect)'
+    lore:
+    - '&f<online> / 300'
+    - '&c&lCONNECTED'
+
+# Configurate the GUI's
+gui:
+  selector:
+    name: '&nServer Selector'
+    size: 27
+    slot: 3
+    items:
+      '1':
+        server-name: 'ArenaPvP'
+        slot: 12
+        item: 'BOW'
+        name: '&e&lArena PvP'
+        enchanted: true
+        lore:
+        - '&f<online> / 300 players'
+        - '<server_status>'
+        scrollItems: true
+        scrollItemList:
+        - DIAMOND_SWORD
+        - BOW
+      '2':
+        server-name: 'Factions'
+        slot: 14
+        item: 'DIAMOND_SWORD'
+        enchanted: false
+        name: '&e&lFactions'
+        lore:
+        - '&f<online> / 300 players'
+        - '<server_status>'
+        scrollItems: false
+        scrollItemList:
+        - IRON_SWORD
+        - REDSTONE
+        - DIAMOND_SWORD
+        - DIAMOND_AXE
+  lobby:
+    name: '&nLobby Selector'
+    # For a Dynamic size (Fits inventory to amount of lobbies) use 0
+    size: 0
+    slot: 5
+
+# Configurate the Plugin sounds.
+sounds:
+  already-connected: 'ANVIL_LAND;0.25;1.5'
+  connecting: 'SUCCESSFUL_HIT;1.0;0.75'
+  open-selector: 'ENDERMAN_TELEPORT;1.0;0.25'
+  open-lobby: 'BAT_TAKEOFF;1.0;0.25'
+
+# Configurate the Plugin messages.
+messages:
+  already-connected: '&c&l(!) &cYou are already connected to &7&n<name>&c.'
+  connecting: '&a&l(!) &aPlease wait while we transfer you to &7&n<name>&a.'
+#The place holder for any server / lobby in the GUI is <server_status>
+statusChecker:
+  updateInterval: 5
+  online: "&a&lONLINE"
+  offline: "&c&lOFFLINE"
+  full: "&b&lVIP JOIN ONLY"
+  serverList:
+    ArenaPvP:
+      ip: '127.0.0.1'
+      port: '25565'
+      maxPlayers: 500
+    Factions:
+      ip: '127.0.0.1'
+      port: '25567'
+      maxPlayers: 500
